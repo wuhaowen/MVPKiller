@@ -1,0 +1,44 @@
+<idea-plugin version="2">
+  <id>wuhaowen.mvpkillerID</id>
+  <name>MVPKiller</name>
+  <version>1.1</version>
+  <vendor email="wuhaowen0731@163.com" url="https://github.com/wuhaowen">吴浩文</vendor>
+
+  <description><![CDATA[
+      mvp + dagger2 code generator
+    ]]></description>
+
+  <change-notes><![CDATA[
+      永远在改变
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="145.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <applicationConfigurable groupId="tools" instance="com.smilekiller.Configurable" id="config.settings" displayName="MvpKiller" />
+  </extensions>
+
+  <actions>
+
+    <action id="SmileKiller.Action" class="com.smilekiller.MVPKiller" text="MVPKiller" description="MVPKiller">
+      <add-to-group group-id="JavaGenerateGroup1" anchor="first"/>
+    </action>
+  </actions>
+
+  <project-components>
+
+  </project-components>
+  <application-components>
+    <component>
+      <implementation-class>com.smilekiller.MvpPersistentStateComponent</implementation-class>
+    </component>
+  </application-components>
+</idea-plugin>
